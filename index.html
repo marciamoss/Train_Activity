@@ -1,0 +1,86 @@
+<!Doctype <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Train Time</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.8.1/firebase.js"></script>
+    <script src="assets/javascript/moment.js"></script>
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <!-- Jumbotron -->
+        <div class="jumbotron mb-1">
+            <h1 class="text-center">Anytime is Train Time!</h1>
+        </div>
+        <div class="row mb-1">
+            <div class="col-lg-12">
+                <div class="card card-default" id="trains">
+                    <div class="card-header">
+                        Current Train Schedule
+                    </div>
+                    <table class="table table-striped table-hover">
+                        <thead>
+                            <tr>
+                                <th>Train Name</th>
+                                <th>Destination</th>
+                                <th>Frequency (min)</th>
+                                <th>Next Arrival</th>
+                                <th>Minutes Away</th>
+                            </tr>
+                        </thead>    
+                        <tbody>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            
+            <!-- Sign-Up Card-->
+            <div class="col-lg-12">
+            <div class="card card-default">
+                <div class="card-header">
+                Add Train
+                </div>
+                <div class="card-body">
+    
+                <!-- Add train Form (note the various input "types")-->
+                <form role="form">
+                    <div class="form-group row">
+                    <label for="name-input">Train Name</label>
+                    <input class="form-control" id="name-input" type="text">
+                    </div>
+                    <div class="form-group row">
+                    <label for="destination-input">Destination</label>
+                    <input class="form-control" id="destination-input" type="text">
+                    </div>
+                    <div class="form-group row">
+                    <label for="time-input">First Train Time (HH:mm - military time)</label>
+                    <input class="form-control" id="time-input">
+                    </div>
+                    <div class="form-group row">
+                    <label for="frequency-input">Frequency (min)</label>
+                    <input class="form-control" id="frequency-input" type=text>
+                    </div>
+                    <button class="btn btn-primary" id="add-train" type="submit">Submit</button>
+                </form>
+                </div>
+            </div>
+            </div>
+    
+            
+    
+        </div>
+        
+    </div>
+     
+</body>
+</html>
